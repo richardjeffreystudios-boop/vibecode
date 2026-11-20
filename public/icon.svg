@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f2942"/>
+      <stop offset="58%" stop-color="#1e4b6e"/>
+      <stop offset="100%" stop-color="#e39a54"/>
+    </linearGradient>
+    <linearGradient id="beamL" x1="1" y1="0.5" x2="0" y2="0.5">
+      <stop offset="0%" stop-color="#ffe799" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffe799" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="beamR" x1="0" y1="0.5" x2="1" y2="0.5">
+      <stop offset="0%" stop-color="#ffe799" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffe799" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="url(#sky)"/>
+  <!-- Light beams -->
+  <polygon points="256,162 40,100 40,218" fill="url(#beamL)"/>
+  <polygon points="256,162 472,100 472,218" fill="url(#beamR)"/>
+  <!-- Lake Michigan horizon -->
+  <path d="M0 364 Q128 346 256 364 T512 364 L512 512 L0 512 Z" fill="#103452"/>
+  <path d="M0 398 Q128 384 256 398 T512 398 L512 512 L0 512 Z" fill="#0b2338"/>
+  <!-- North Pier timber base -->
+  <rect x="116" y="346" width="280" height="28" rx="6" fill="#4f3b2e"/>
+  <rect x="128" y="340" width="256" height="10" rx="3" fill="#7c5d46"/>
+  <!-- Lighthouse tower -->
+  <polygon points="218,342 232,192 280,192 294,342" fill="#f7f3eb"/>
+  <polygon points="256,192 280,192 294,342 256,342" fill="#e2dacb"/>
+  <!-- Gallery deck -->
+  <rect x="212" y="182" width="88" height="14" rx="4" fill="#c93b2b"/>
+  <!-- Lantern room -->
+  <rect x="230" y="138" width="52" height="44" fill="#fff2b8"/>
+  <rect x="230" y="138" width="52" height="44" fill="none" stroke="#c93b2b" stroke-width="6"/>
+  <line x1="256" y1="138" x2="256" y2="182" stroke="#c93b2b" stroke-width="4"/>
+  <!-- Crimson conical roof & finial -->
+  <polygon points="216,140 256,94 296,140" fill="#c93b2b"/>
+  <circle cx="256" cy="88" r="8" fill="#f5b841"/>
+  <!-- Tower door & windows -->
+  <rect x="246" y="230" width="20" height="28" rx="3" fill="#173854"/>
+  <path d="M242 342 L242 302 A14 14 0 0 1 270 302 L270 342 Z" fill="#c93b2b"/>
+</svg>

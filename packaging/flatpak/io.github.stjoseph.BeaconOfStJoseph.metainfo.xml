@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.stjoseph.BeaconOfStJoseph</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>Apache-2.0</project_license>
+  <name>Beacon of St. Joseph</name>
+  <summary>Spyro-inspired 3D platformer set in St. Joseph, Michigan</summary>
+  <description>
+    <p>
+      Soar, glide, and horn-charge through the brick streets of downtown St. Joseph, Michigan.
+      Discover iconic Lake Michigan landmarks including State Street, Lake Bluff Park, the
+      Maid of the Mist Fountain, Silver Beach Carousel, the North Pier Twin Lighthouses,
+      and the St. Joseph River Swing Bridge.
+    </p>
+    <p>
+      Step through shimmering harbor portals to explore nearby landmark realms and collect
+      six lost lighthouse artifacts to relight the harbor beacon.
+    </p>
+  </description>
+  <launchable type="desktop-id">io.github.stjoseph.BeaconOfStJoseph.desktop</launchable>
+  <provides>
+    <binary>beacon-of-st-joseph</binary>
+  </provides>
+  <content_rating type="oars-1.1" />
+  <categories>
+    <category>Game</category>
+    <category>AdventureGame</category>
+  </categories>
+  <releases>
+    <release version="1.0.0" date="2026-11-20">
+      <description>
+        <p>Initial release with Downtown St. Joseph Hub and three landmark portal realms.</p>
+      </description>
+    </release>
+  </releases>
+</component>

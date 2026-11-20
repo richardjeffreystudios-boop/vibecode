@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Beacon of St. Joseph
+GenericName=3D Harbor Platformer
+Comment=Explore St. Joseph, Michigan in 3D, traverse landmark portals, and restore the North Pier Lighthouse beacon.
+Exec=beacon-of-st-joseph %U
+Icon=io.github.stjoseph.BeaconOfStJoseph
+Terminal=false
+Categories=Game;ActionGame;AdventureGame;
+Keywords=3D;Platformer;St Joseph;Michigan;Lighthouse;Spyro;
+StartupWMClass=beacon-of-st-joseph

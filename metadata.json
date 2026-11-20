@@ -1,0 +1,6 @@
+{
+  "name": "Beacon of St. Joseph",
+  "description": "A Spyro-inspired 3D platformer set in St. Joseph, Michigan. Explore State Street, leap through harbor portals to local landmarks, and recover the 6 lost lighthouse artifacts to restore the North Pier beacon.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,46 @@
+id: io.github.stjoseph.BeaconOfStJoseph
+runtime: org.freedesktop.Platform
+runtime-version: '24.08'
+sdk: org.freedesktop.Sdk
+base: org.electronjs.Electron2.BaseApp
+base-version: '24.08'
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.node20
+command: beacon-of-st-joseph
+separate-locales: false
+
+finish-args:
+  - --share=ipc
+  - --socket=x11
+  - --socket=wayland
+  - --socket=pulseaudio
+  - --device=dri
+  - --env=ELECTRON_OZONE_PLATFORM_HINT=auto
+
+modules:
+  - name: beacon-of-st-joseph
+    buildsystem: simple
+    build-options:
+      append-path: /usr/lib/sdk/node20/bin
+      env:
+        NPM_CONFIG_LOGLEVEL: info
+    build-commands:
+      - npm ci --offline || npm install
+      - npm run build
+      - install -d /app/main
+      - cp -r dist /app/main/dist
+      - install -Dm644 packaging/electron/main.cjs /app/main/main.cjs
+      - install -Dm644 packaging/electron/package.json /app/main/package.json
+      - |
+        cat << 'EOF' > /app/bin/beacon-of-st-joseph
+        #!/bin/sh
+        exec zypak-wrapper /app/main/electron /app/main/main.cjs "$@"
+        EOF
+      - chmod +x /app/bin/beacon-of-st-joseph
+      - install -Dm644 packaging/flatpak/io.github.stjoseph.BeaconOfStJoseph.desktop /app/share/applications/io.github.stjoseph.BeaconOfStJoseph.desktop
+      - install -Dm644 packaging/flatpak/io.github.stjoseph.BeaconOfStJoseph.metainfo.xml /app/share/metainfo/io.github.stjoseph.BeaconOfStJoseph.metainfo.xml
+      - install -Dm644 public/icon.svg /app/share/icons/hicolor/scalable/apps/io.github.stjoseph.BeaconOfStJoseph.svg
+      - install -Dm644 public/pwa-512x512.png /app/share/icons/hicolor/512x512/apps/io.github.stjoseph.BeaconOfStJoseph.png
+    sources:
+      - type: dir
+        path: ../..
